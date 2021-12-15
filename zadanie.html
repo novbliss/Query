@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Zadanie 1</title>
     <style type="text/css">
         html,body{
@@ -30,13 +31,28 @@
             background-color: red;
         }
         #plandnia{
-            
+            padding-top: 10%;
+            padding-left: 27%;
         }
-        .mojaklasa{
+        #plandnia p{
+            margin: auto;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 50px;
+        }
+        .klasa{
             margin-left: 5px;
-            background-color: cornflowerblue;
-            color: red;
+            background-color: red;
+            color: black;
             cursor: pointer;
+        }
+        #animacja{
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border: 5px solid black;
+            border-radius: 50px;
+            margin-top: 75px;
+            margin-left: 320px;
         }
     </style>
     <script type="text/javascript">
@@ -45,10 +61,10 @@
                 var val = $("input").val();
                 if(val != ""){
                     var element = $("<li></li>").text(val);
-                    $(element).append("<button class='mojaklasa'>x</button>");
+                    $(element).append("<button class='klasa'>⠀-⠀</button>");
                     $("#lista").append(element);
                     $("input").val("");
-                    $(".mojaklasa").on("click",function(){
+                    $(".klasa").on("click",function(){
                         $(this).parent().remove();
                     });
                 }
@@ -60,18 +76,28 @@
     <div id="l">
         <div id="plandnia">
             <p>Plan Dnia</p>
-            <input type="text" placeholder="Dodaj punkt planu dnia" /> <button id="dodaj">DODAJ</button>
-            <ol id="lista"
+            <input type="text" placeholder="Dodaj punkt planu dnia" />
+            <button id="dodaj">⠀+⠀</button>
+            <ol id="lista"></ol>
         </div>
     </div>
     <div id="pg">
         <div id="animacja">
-            Animacja
         </div>
     </div>
+    <script type="text/javascript">
+        $("#animacja").hover(function(){
+            $(this).animate({width:"+=100px"},1000)
+            $(this).animate({height:"+=100px"},1000)
+        },function(){
+            $(this).animate({width:"-=100px"},1000)
+            $(this).animate({height:"-=100px"},1000)
+        });
+    </script>
     <div id="pd">
         <div id="bungulator">
             Bungulator
+            <button class="startanim">Start</button>
         </div>
     </div>
 </body>
