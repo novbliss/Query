@@ -47,12 +47,10 @@
         }
         #animacja{
             background-color: white;
-            width: 50px;
-            height: 50px;
-            border: 5px solid black;
-            border-radius: 50px;
-            margin-top: 75px;
-            margin-left: 320px;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            margin-left: 340px;
         }
     </style>
     <script type="text/javascript">
@@ -82,16 +80,25 @@
         </div>
     </div>
     <div id="pg">
-        <div id="animacja">
-        </div>
+        
+        <div id="animacja"></div>
     </div>
     <script type="text/javascript">
         $("#animacja").hover(function(){
-            $(this).animate({width:"+=100px"},1000)
-            $(this).animate({height:"+=100px"},1000)
+            
+            $(this).animate({height:"-=99px"})
+            $(this).animate({width:"-=99px"})
         },function(){
-            $(this).animate({width:"-=100px"},1000)
-            $(this).animate({height:"-=100px"},1000)
+            $(this).animate({width:"+=100px"})
+            $(this).animate({height:"+=100px"})
+            $(this).animate({width:"-=100px"})
+            $(this).animate({height:"-=100px"})
+            $(this).animate({height:"+=100px"})
+            $(this).animate({width:"+=100px"})
+            $(this).animate({height:"-=100px"})
+            $(this).animate({width:"-=100px"})
+            $(this).animate({height:"+=99px"})
+            $(this).animate({width:"+=99px"})
         });
     </script>
     <div id="pd">
