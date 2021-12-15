@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Ćwiczenie 8 jQuery</title>
+    <style>
+        body{
+            background-color: rgb(61, 61, 61);
+        }
+        #box{
+            display: none;
+            color: whitesmoke;
+            border-radius: 20px;
+            border: 2px solid whitesmoke;
+            width: 200px;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 10px;
+            margin-top: 25px;
+            margin: auto;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $("#show").click(function(){
+                $("#box").show();
+            });
+            $("#hidden").click(function(){
+                $("#box").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="show">Pokaż</button>
+    <button id="hidden">Ukryj</button>
+    <div id="box">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque et aliquam dolores, rem laborum sint dolor asperiores commodi repellat ab mollitia cum odio, nesciunt ipsa animi, impedit facilis veritatis doloremque.
+    </div>
+</body>
+</html>
